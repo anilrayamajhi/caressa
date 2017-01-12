@@ -10,7 +10,8 @@
     <!-- CSS -->
     <!--===============================================================-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Kumar+One" rel="stylesheet" type="text/css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
     <link href="assets/css/magnific-popup.css" rel="stylesheet">
@@ -33,17 +34,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <ul class="nav navbar-nav navbar-right"><li>
-            <a  data-scroll="" href="#home" style="font-size:23px;">caressa beauty</a>
-          </li></ul>
+          <div id="tt" >
+              <a data-scroll="" href="#home">Caressa Beauty</a>
+
+          </div>
+
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a data-scroll="" href="#portfolio">Portfolio</a></li>
             <li><a data-scroll="" href="#skills">Skills</a></li>
             <li><a data-scroll="" href="#services">Services</a></li>
-            <li><a data-scroll="" href="blog.html">Blog</a></li>
-            <li><a data-scroll="" href="#contact"><span class="contact">Contact</span></a></li>
+            <li><a data-scroll="" href="#location">Location</a></li>
+            <li><a data-scroll="" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -56,7 +58,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h1 class="text-center">HEY ! <br> I'm John Doe Web and Graphic Designer</h1>
+              <h2 class="text-center" style="font-family: 'Kumar One', cursive;">||Embellishment is a craft||</h2>
             </div>
           </div>
         </div>
@@ -236,19 +238,14 @@
       </div>
     </div>
 
-    <!-- CONTACT-->
-    <!--===============================================================-->
-    <div class="bg-contact" id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <h3>Feel free to contact me for your next project</h3>
-              <!-- YOUR E-MAIL-->
-            <a href="mailto:example@example.com" class="mail"><span class="glyphicon glyphicon-envelope"></span>E-MAIL</a>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+
+  <div class="container-fluid map-container" id="location">
+    <div id="map"></div>
+  </div>
+
+
 
     <!-- FOOTER-->
     <!--===============================================================-->
@@ -265,13 +262,14 @@
       </div>
     </div>
 
+
     <!-- FOOTER-BOTTOM-->
     <!--===============================================================-->
     <div class="bg-footer-bottom">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p class="copyright">2014 © Mamoot Studio - All Rights Reserved</p>
+            <p class="copyright">2016 © Caressa Beauty - All Rights Reserved</p>
           </div>
           <div class="col-sm-6">
             <ul class="list-inline pull-right">
@@ -287,12 +285,45 @@
 
     <!-- JAVASCRIPT-->
     <!--===============================================================-->
+    <script>
+    var map;
+    function getAddress() {
+      $.get('https://maps.googleapis.com/maps/api/geocode/json?address="10410 Venice Blvd, Los Angeles"')
+      .success(function(data) {
+        // console.log("Latitude:", data.results[0].geometry.location.lat)
+        // console.log("Longitute:", data.results[0].geometry.location.lng)
+        var geocodedAddress = data.results[0].geometry.location
+        myMap = new google.maps.Map(document.getElementById('map'), {
+          center: geocodedAddress,
+          zoom: 17,
+          content: 'Ganey'
+        });
+        var marker = new google.maps.Marker({
+          position: geocodedAddress,
+          map: myMap,
+        });
+        var contentString = "<strong>Caressa Beauty</strong><br /><em>10410 Venice Blvd</em><br />(310) 815-9479"
+        var infowindow = new google.maps.InfoWindow({
+           content: contentString
+         });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+    });
+      })
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGpU5i66YurDTpGk9tb9DLhoBGKPzxUBE&callback=getAddress"
+      async defer></script>
+
+
+
     <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/smooth-scroll.js"></script>
     <script src="assets/js/jRespond.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
