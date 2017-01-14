@@ -542,7 +542,7 @@ hr {
     border-radius: 100%;
     width: 50px;
     height: 50px;
-    /*border: solid 4px #610505;*/
+    border: solid 4px #610505;
     font-size: 27px;
     text-align: center;
     padding-top: 7px;
