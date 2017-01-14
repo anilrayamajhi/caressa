@@ -60,16 +60,16 @@ hr {
     margin-bottom: 65px;
 }
 
-#tt {
-  font-size: 57px;
-}
-
 .map-container {
-  padding: 137px 0 0 0;
+  padding: 137px 0 77px 0;
 }
 
 #map {
   height: 500px;
+}
+
+#mobile {
+  display: none;
 }
 
 @media (max-width:767px) {
@@ -89,9 +89,8 @@ hr {
     .title {
         margin-top: 65px;
     }
-    #tt {
-      font-size: 27px;
-      text-align: center;
+    #mobile {
+      display: inline;
     }
 }
 
@@ -142,6 +141,26 @@ hr {
 
 .navbar-default.tiny {
     min-height: 56px;
+}
+
+.navbar-brand {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.navbar-brand {
+    margin-top: 33px;
+    font-size: 47px;
+    /*transition*/
+    -webkit-transition: all .22s ease-out;
+    -moz-transition: all .22s ease-out;
+    -o-transition: all .22s ease-out;
+    transition: all .22s ease-out;
+}
+
+.navbar.tiny .navbar-brand {
+    margin-top: 17px;
+    font-size: 33px;
 }
 
 
@@ -200,16 +219,26 @@ hr {
         padding: 3px 10px;
     }
 
+    .navbar-brand {
+       width: 86px;
+       margin-top: 4px;
+   }
+
+   .navbar.tiny .navbar-brand {
+       width: 86px;
+       margin-top: 4px;
+   }
+
     .navbar-default .navbar-toggle {
-        background-color: #3F0000;
-        border-color: #3F0000;
+        background-color: #610505;
+        border-color: #610505;
     }
 
     .navbar-default .navbar-toggle:hover,
     .navbar-default .navbar-toggle:active,
     .navbar-default .navbar-toggle:focus {
-        background-color: #38e2c0;
-        border-color: #38e2c0;
+        background-color: #923636;
+        border-color: #923636;
     }
 
     .navbar-default .navbar-toggle .icon-bar {
@@ -221,9 +250,9 @@ hr {
    ================================================== */
 
 .bg-intro {
-    color: #3F0000;
-    background: url('https://www.chromeactions.com/i/home-layer.png') fixed, url('https://lh3.googleusercontent.com/DBQHQo_6FxB3_vuxaL1I8a6-x7ZBhOtBIn9yfongy0mcaS1pQoDL36RAFqZPaL48A-w0yGgdfZON=w1920-h1080-rw-no') 100% 100% /  cover fixed;
-    height: 800px;
+    color: white;
+    background: url('https://www.chromeactions.com/i/home-layer.png') fixed, url('http://nebula.wsimg.com/4b28daf5c13b1b34565bca7756120909?AccessKeyId=701697F21088CE2E3911&disposition=0&alloworigin=1') 50% 100% /  cover fixed;
+    height: 700px;
 }
 
 .bg-intro .row {
@@ -296,7 +325,7 @@ hr {
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #3F0000;
+    border-top: 20px solid #610505;
     margin: 0 auto;
 }
 
@@ -321,7 +350,7 @@ hr {
     margin: 0 auto;
     position: relative;
     display: block;
-    background-color: #3F0000;
+    background-color: #eee;
     max-width: 320px;
     /*box-shadow*/
     -webkit-box-shadow: 0px 6px 0 0 rgba(0,0,0,0.08);
@@ -341,12 +370,13 @@ hr {
 .wrapper-portfolio:hover .img-responsive {
     /* IE 8 OPACITY*/
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
-    opacity: 0.06;
+    opacity: 0.8;
+
 }
 
 .wrapper-portfolio:hover .category {
     visibility: visible;
-    top: 50%;
+    top: 80%;
 }
 
 .category {
@@ -358,7 +388,7 @@ hr {
     bottom: 0;
     text-align: center;
     margin: 0 auto;
-    color: #FFF;
+    color: #610505;
     line-height: 0;
     font-size: 20px;
     /*transition*/
@@ -399,7 +429,7 @@ hr {
 }
 
 .progress-bar {
-    background-color: #3F0000;
+    background-color: #610505;
 }
 
 @media (max-width:767px) {
@@ -423,7 +453,7 @@ hr {
     width: 40px;
     text-align: center;
     padding-top: 10px;
-    color: #3F0000;
+    color: #610505;
 }
 
 .bg-services .row .fa-mobile {
@@ -453,16 +483,10 @@ hr {
 /* CONTACT
    ================================================== */
 .bg-contact {
-    background-color: #3F0000;
+    background-color: #610505;
     color: #FFF;
     padding-top: 32px;
     padding-bottom: 32px;
-}
-
-.bg-contact .glyphicon-envelope {
-    margin-right: 10px;
-    position: relative;
-    top: 2px;
 }
 
 .bg-contact .mail {
@@ -484,7 +508,7 @@ hr {
 
 .bg-contact .mail:hover {
     background-color: #FFF;
-    color: #3F0000;
+    color: #610505;
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;
     -o-transition: all .1s linear;
@@ -514,14 +538,14 @@ hr {
 }
 
 .bg-footer .fa {
-    color: #3F0000;
+    color: #610505;
     border-radius: 100%;
     width: 50px;
     height: 50px;
-    border: solid 4px #3F0000;
-    font-size: 37px;
+    border: solid 4px #610505;
+    font-size: 27px;
     text-align: center;
-    padding-top: 3px;
+    padding-top: 7px;
     margin-right: 20px;
     text-decoration: none;
     -webkit-transition: all .1s linear;
@@ -531,8 +555,8 @@ hr {
 }
 
 .bg-footer .fa:hover {
-    background-color: #3F0000;
-    color: black;
+    background-color: #610505;
+    color: white;
 }
 
 @media (max-width:767px) {
@@ -546,7 +570,7 @@ hr {
     .bg-footer .fa {
         width: 50px;
         height: 50px;
-        border: solid 2px #3a536b;
+        border: solid 2px #610505;
         font-size: 30px;
         padding-top: 8px;
         margin-right: 10px;
@@ -579,7 +603,7 @@ hr {
 }
 
 .bg-footer-bottom ul li a:hover {
-    color:#3F0000;
+    color:white;
     text-decoration: none;
 
 }
@@ -720,7 +744,7 @@ hr {
 }
 
 .wrapper-blog a .title-post:hover {
-    color:#3F0000;
+    color:#610505;
 }
 
 /* BLOG-POST-GALLERY */
@@ -728,7 +752,7 @@ hr {
     border-radius:4px;
     position: relative;
     display: block;
-    background-color: #3F0000;
+    background-color: #610505;
     margin-bottom:20px;
     max-width:350px;
 }
@@ -815,4 +839,47 @@ hr {
     font-size:15px;
 }
 
+}
+
+
+/*hour of operation*/
+
+.demo-bg{
+background: rgba(80, 24, 17, 0.16);
+margin-top: 60px;
+}
+.business-hours {
+background: #222;
+padding: 40px 14px;
+margin-top: -15px;
+position: relative;
+}
+.business-hours:before{
+content: '';
+width: 23px;
+height: 23px;
+background: #111;
+position: absolute;
+top: 5px;
+left: -12px;
+transform: rotate(-45deg);
+z-index: -1;
+}
+.business-hours .title {
+font-size: 20px;
+color: #BBB;
+text-transform: uppercase;
+padding-left: 5px;
+border-left: 4px solid #610505;
+}
+.business-hours li {
+color: #888;
+line-height: 30px;
+border-bottom: 1px solid #333;
+}
+.business-hours li:last-child {
+border-bottom: none;
+}
+.business-hours .opening-hours li.today {
+color: white;
 }
