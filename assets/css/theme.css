@@ -20,7 +20,7 @@ Description: Style-Layout
 /* GENERAL
    ================================================== */
 body {
-    padding-top: 0;
+
     font-family: 'Archivo Narrow', sans-serif;
 }
 
@@ -221,6 +221,7 @@ hr {
 
     .navbar-brand {
        width: 86px;
+       font-size: 27px;
        margin-top: 4px;
    }
 
@@ -262,6 +263,7 @@ hr {
 
 
 .bg-intro h1 {
+    font-family: 'Kumar One, cursive';
     position:relative;
     top:0px;
     font-size: 46px;
