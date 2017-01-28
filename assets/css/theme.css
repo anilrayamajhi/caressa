@@ -150,7 +150,7 @@ hr {
 }
 
 .navbar-brand {
-    margin-top: 33px;
+    margin-top: 3px;
     font-size: 47px;
     /*transition*/
     -webkit-transition: all .22s ease-out;
@@ -856,7 +856,7 @@ hr {
 
 .demo-bg{
 background: url('https://www.chromeactions.com/i/home-layer.png') fixed, url('https://lh3.googleusercontent.com/-Il2eFZnT2k8/VGBLjFu2ywI/AAAAAAAAAC8/z5ClnAKs3a8E-TbLmAZPaFcpnyLj4RwrQCL0B/s1000-fcrop64=1,000000d9ff0affff/a.jpeg') 50% 100% /  cover fixed;
-width: 90%;
+width: 100%;
 margin-top: 60px;
 }
 .business-hours {
