@@ -149,7 +149,7 @@
 
 
 <!-- Map -->
-  <div class="container map-container" id="location">
+  <div class="container-fluid map-container" id="location">
     <div id="map"></div>
   </div>
 
@@ -289,9 +289,17 @@
       }
     ]
         });
+        var icon = {
+            url: "map-marker-icon.png", // url
+            scaledSize: new google.maps.Size(50, 60), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(0, 0) // anchor
+        };
+
         var marker = new google.maps.Marker({
           position: geocodedAddress,
           map: myMap,
+          icon,
         });
         var contentString = "<strong>Caressa Beauty</strong><br /><em>10410 Venice Blvd</em><br />(310) 815-9479"
         var infowindow = new google.maps.InfoWindow({

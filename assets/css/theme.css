@@ -61,12 +61,12 @@ hr {
 }
 
 .map-container {
-  padding: 137px 0 77px 0;
-  width: 90%;
+  padding: 37px 0 0 0;
+  width: 100%;
 }
 
 #map {
-  height: 500px;
+  height: 570px;
 }
 
 #mobile {
