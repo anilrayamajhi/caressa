@@ -63,6 +63,7 @@ hr {
 .map-container {
   padding: 37px 0 0 0;
   width: 100%;
+  background: linear-gradient(to top, black 92%, white 100%)
 }
 
 #map {
@@ -411,10 +412,15 @@ hr {
 /* SKILLS
    ================================================== */
 .bg-skills {
-    background-color: #F2F2F2;
+    background: linear-gradient(to top, white, lavender, aliceblue);
     padding-top: 130px;
     padding-bottom: 130px;
 }
+
+.bg-portfolio {
+  background: linear-gradient(to top, aliceblue, lavender, white);
+}
+
 
 .bg-skills h2 {
     margin-top: 0;
@@ -598,7 +604,6 @@ hr {
 .bg-footer-bottom p {
     margin: 0;
     padding: 0;
-    color: #3a536b;
     font-size: 15px;
 }
 
@@ -609,7 +614,7 @@ hr {
 }
 
 .bg-footer-bottom ul li a {
-    color:#3a536b;
+    color:#610505;
 }
 
 .bg-footer-bottom ul li a:hover {
@@ -618,7 +623,7 @@ hr {
 
 }
 .bg-footer-bottom .border-right {
-    border-right: 1px solid #3a536b;
+    border-right: 1px solid #610505;
     padding-right: 12px;
 }
 
